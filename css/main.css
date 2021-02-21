@@ -163,21 +163,72 @@ img {
   margin-right: 10px;
 }
 
-.hero__button {
-  padding-bottom: 200px;
-  min-width: 200px;
-  height: 50px;
-  padding: 10px 32px;
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+.address-list__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address-list__map {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-list__map:hover, .address-list__map:focus {
+  color: var(--accent-color);
+}
+
+.address-list__link {
+  color: var(--desk-link-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-list__link:hover, .address-list__link:focus {
+  color: var(--accent-color);
+}
+
+.button {
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.185;
-  text-align: center;
   letter-spacing: 0.06em;
-  color: var(--text-color);
   background-color: var(--accent-color);
+  color: var(--text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
+}
+
+.hero__button {
+  min-width: 200px;
+  height: 50px;
+  padding-bottom: 200px;
+  padding: 10px 32px;
+}
+
+.modal-form__btn {
+  width: 200px;
+  height: 50px;
+  align-self: center;
+  transition: box-shadow 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form__btn:hover, .modal-form__btn:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.footer-form__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  height: 50px;
+  margin-top: 36px;
+  margin-left: 10px;
+}
+
+.footer-form__icon {
+  margin-left: 10px;
 }
 
 .hero__title {
@@ -331,8 +382,8 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form__input:hover .modal-form__icon,
-.modal-form__input:focus .modal-form__icon {
+.modal-form__input:hover + .modal-form__icon,
+.modal-form__input:focus + .modal-form__icon {
   fill: var(--accent-color);
 }
 
@@ -380,11 +431,11 @@ img {
   background-image: url("../for-sprite/rectangle-off.svg");
 }
 
-.check-box:checked .check-box {
+.check-input:checked + .check-box {
   background-image: url("../for-sprite/check-on.svg");
 }
 
-.check-box:focus .check-box {
+.check-input:focus + .check-box {
   outline: 3px solid #005fcc;
   outline-width: 1.333;
   outline-style: auto;
@@ -392,26 +443,6 @@ img {
 
 .form-link {
   color: var(--accent-color);
-}
-
-.modal-form__btn {
-  width: 200px;
-  height: 50px;
-  align-self: center;
-  background-color: var(--accent-color);
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  color: var(--text-color);
-  font-size: 16px;
-  line-height: 1.88;
-  cursor: pointer;
-  font-weight: 700;
-  transition: box-shadow 2500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-form__btn:hover, .modal-form__btn:focus {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .footer-form {
@@ -443,30 +474,6 @@ img {
 
 .footer-input::placeholder {
   color: rgba(255, 255, 255, 0.6);
-}
-
-.footer-form__btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 200px;
-  height: 50px;
-  margin-top: 36px;
-  margin-left: 10px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.875;
-  letter-spacing: 0.06em;
-  background: var(--accent-color);
-  color: var(--text-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-}
-
-.footer-form__icon {
-  margin-left: 10px;
 }
 
 /* LAYOUT */
@@ -699,10 +706,6 @@ img {
   justify-content: center;
 }
 
-.address-list__item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
 .address {
   width: 231px;
   font-style: normal;
@@ -710,25 +713,6 @@ img {
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
-}
-
-.address-list__map {
-  color: var(--text-color);
-  text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.address-list__map:hover, .address-list__map:focus {
-  color: var(--accent-color);
-}
-
-.address-list__link {
-  color: var(--desk-link-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.address-list__link:hover, .address-list__link:focus {
-  color: var(--accent-color);
 }
 
 .address-container {
